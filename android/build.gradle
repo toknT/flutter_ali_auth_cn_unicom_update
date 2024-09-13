@@ -26,6 +26,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.toknt.flutter_ali_auth'
+    }
     compileSdkVersion 31
 
     aaptOptions {
